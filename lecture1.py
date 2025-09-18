@@ -14,7 +14,7 @@ def bruteforce(words):
     for i in range(len(words)):
         for j in range(len(words)):
             if words[i] != words[j]:
-                for l in range(min(len(words[i]), len(words[j])), 1, -1):
+                for l in range(min(len(words[i]), len(words[j])), 0, -1):
                     if words[i][-l:] == words[j][:l]:
                         if l > best:
                             best = l

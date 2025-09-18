@@ -12,6 +12,8 @@ with open('file.txt', 'r', encoding='utf-8') as f:
 
 
 @pytest.mark.parametrize("text, expected", [
+    ([], [0, None]),
+    (["q", "qwerty", "y"], [1, ("q", "qwerty")]),
     (["123", "2", "234"], [2, ("123", "234")]),
     (words, [6, ('JjA3python', 'pythonf')])
 ])
@@ -21,6 +23,8 @@ def test_bruteforce(text: List[str], expected: [int, (str, str)]):
 
 
 @pytest.mark.parametrize("text, expected", [
+    ([], [0, None]),
+    (["q", "qwerty", "y"], [1, ("q", "qwerty")]),
     (["123", "2", "234"], [2, ("123", "234")]),
     (words, [6, ('JjA3python', 'pythonf')])
 ])
